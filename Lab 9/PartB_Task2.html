@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dropdown list</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    function addCombobox() {
+    var textb = document.getElementById("txtCombo");
+    var combo = document.getElementById("combo");
+    var option = document.createElement("option");
+    option.text = textb.value;
+    option.value = textb.value;
+    try {
+        combo.add(option, null); 
+    }catch(error) {
+        combo.add(option); 
+    }
+    textb.value = "";
+}
+
+$(document).ready(function(){
+    $("select.country").change(function(){
+        var selectedCountry = $(".country option:selected").val();
+        $.ajax({
+            type: "POST",
+            url: "PartB_Task2",
+            data: { country : selectedCountry } 
+        }).done(function(data){
+            $("#response").html(data);
+        });
+    });
+});
+
+</script>
+
+<style type="text/css">
+    
+div{
+
+   position: absolute;
+   top: 50%;
+   bottom: 50%;
+   left: 50%;
+   right: 50%;
+}
+</style>
+</head>
+<body>
+<div>
+<form>
+    <table>
+        <tr>
+            <td>
+             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label><center>Type a Country Name</center></label>
+            <input type="text" name="txtCombo" id="txtCombo"/>
+            <input type="button" value="Click to add" onclick="addCombobox()">
+            <br/><br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+           your Country:<select name="combo" id="combo" class="country"></select>
+            </td>
+            <td id="response">
+                <!--Response will be inserted here-->
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+</body> 
+</html>

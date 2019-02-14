@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Feedback</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Feedback/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Feedback/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="25.5914" data-map-y="68.4394" data-pin="Feedback/images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+		<div class="contact100-more">
+			<i class="zmdi zmdi-phone-in-talk"></i>
+			info@messiah.pk
+		</div>
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="Task1.php" method="post" name="form">
+				<img id="imageicon" src="feedback.png" width="10%">
+				<br>
+
+				<span class="contact100-form-title texty"><font >
+					<h1>Messiah</h1></font>
+				</span>
+				<span class="contact100-form-title textyy">
+					<font size="4px" color="#6ab04c">We need people who will give us feedback.</font>
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Your Name</span>
+					<input class="input100" type="text" name="name" placeholder="Enter your Name please" required=required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Personal Email</span>
+					<input class="input100" type="text" name="email" placeholder=" Your Email addess" required=required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Phone/mobile</span>
+					<input class="input100" type="text" name="phone" placeholder="Enter Phone Number" required=required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<span class="label-input100">Feedback</span>
+					<br><textarea class="input100" name="message" placeholder="Complain/suggestion" required=required></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							Send
+						</button>
+					</div>
+				</div>
+	
+				
+			</form>
+			<div class="social flex-c-m">
+					<a href="www.facebook.com/MatiariIceCream" class="social-item flex-c-m bg1 m-r-5">
+						<i class="fa fa-facebook-f" aria-hidden="true"></i>
+					</a>
+
+					<a href="www.twitter.com/MatiariIceCream" class=" flex-c-m bg2 m-r-5">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+
+					<a href="www.youtube.com/MatiariIceCream" class="bg3">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</a>
+				<p id="footer"><font>Copyright © All Rights Reserved</font></p>
+				</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/bootstrap/js/popper.js"></script>
+	<script src="Feedback/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Feedback/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="js/map-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="Feedback/js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>

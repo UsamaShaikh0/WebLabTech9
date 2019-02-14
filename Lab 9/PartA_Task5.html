@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>p{display:none;}</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+  	$("button").click(function(){
+		$("p").text(function(n){
+	$("p").css("display", "inline").show();
+    	  return "list "+(n);
+    	});
+  	});
+ 
+	});
+	</script>
+
+</head>
+<body>
+
+	<button>Click Me</button>
+	<h2>
+	<p>demo0</p>
+	<br><br><p>demo1</p>
+	<br><br><p>demo2.</p>
+	<br><br><p>demo3.</p>
+	</h2>
+</body>
+</html>

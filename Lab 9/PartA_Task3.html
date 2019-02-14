@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+	#msg1{display:none;}
+	#msg2{display:none;}
+	#msg3{display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$("#field1").focusin(function(){
+    $("#msg1").css("display", "inline").show();
+});
+$("#field1").focusout(function(){
+    $("#msg1").css("display", "inline").hide();
+});
+
+$("#fiels2").focusin(function(){
+    $("#msg2").css("display", "inline").show();
+});
+$("fiels2").focusout(function(){
+    $("#msg2").css("display", "inline").hide();
+});
+$("#field3").focusin(function(){
+    $("#msg3").css("display", "inline").show();
+});
+$("#field3").focusout(function(){
+    $("#msg3").css("display", "inline").hide();
+});
+});
+</script>
+</head>
+
+<body>
+ <label>Name</label>
+ <div tabindex="0">
+ <input id=field1  placeholder="Name" name="TITLE"  type="text" >
+ <span id=msg1>Enter First Name</span></div>
+
+ <label>Middle Name</label>
+ <div tabindex="0">
+ <input id=fiels2  placeholder="Middle name" name="TITLE"  type="text" >
+ <span id=msg2>Enter Middle Name</span>
+ </div>
+
+ <label>Last Name</label>
+ <div tabindex="0">
+ <input id=field3  placeholder="Last name" name="TITLE"  type="text" >
+ <span id=msg3>Enter Last Name</span>
+ </div>
+</body>
+</html>
